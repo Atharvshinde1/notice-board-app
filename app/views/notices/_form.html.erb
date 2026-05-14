@@ -1,0 +1,47 @@
+<%= form_with(model: notice) do |form| %>
+  <% if notice.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(notice.errors.count, "error") %> prohibited this notice from being saved:</h2>
+
+      <ul>
+        <% notice.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title,class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.textarea :body, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :author_name, style: "display: block" %>
+    <%= form.text_field :author_name, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.label :category, class: "form-label" %>
+
+<%= form.select :category,
+['General', 'Event', 'Job', 'Other'],
+{},
+class: "form-select" %>
+  </div>
+
+  <div>
+    <%= form.label :pinned, style: "display: block" %>
+    <%= form.checkbox :pinned %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
