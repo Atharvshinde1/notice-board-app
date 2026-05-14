@@ -69,10 +69,11 @@ http://localhost:3000/notices
 
 ## AI Usage Log
 
-- Used ChatGPT for Rails setup guidance
-- Used AI assistance for Bootstrap styling
-- Used AI assistance for debugging PostgreSQL connection issues
-- Used AI assistance for implementing filters and validations
+Used ChatGPT for:
+- Rails setup guidance
+- PostgreSQL debugging
+- Bootstrap styling assistance
+- Understanding Rails concepts
 
 ---
 
